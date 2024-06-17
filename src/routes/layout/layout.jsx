@@ -1,10 +1,17 @@
 import './layout.scss'
+import Navbar from '../../components/navbar/Navbar'
+import { Outlet } from 'react-router-dom'
 
-function Layout(){
+function Layout() {
   return (
-    <div className='layout'>
-        
-    </div>
+      <div className="layout">
+        <div className="navbaar">
+          <Navbar />
+        </div>
+        <div className="content">
+          <Outlet/>
+        </div>
+      </div>
   )
 }
 
