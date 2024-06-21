@@ -1,9 +1,10 @@
+@import "../../responsive.scss";
 .slider{
     width: 100%;
     height: 300px;
     display: flex;
     gap: 20px;
-
+    
     .fullslider{
         position: absolute;
         width: 100vw;
@@ -14,16 +15,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 999;
 
         .arrow{
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+
             img{
                 width: 50px;
                 &.right{
                     transform: rotate(180deg);
+                }
+                @include md{
+                    width: 30px;
+                }
+                @include sm{
+                    width: 20px;
                 }
             }
         }
